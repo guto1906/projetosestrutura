@@ -62,7 +62,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bubblesort: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bubblesort ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/BubbleSort.o: BubbleSort.cpp
+${OBJECTDIR}/BubbleSort.o: BubbleSort.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BubbleSort.o BubbleSort.cpp
@@ -73,6 +73,7 @@ ${OBJECTDIR}/BubbleSort.o: BubbleSort.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bubblesort
 
 # Subprojects
 .clean-subprojects:
